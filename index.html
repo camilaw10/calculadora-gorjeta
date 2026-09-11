@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Gorjeta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Archivo:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="receipt-wrap">
+  <div class="receipt" role="group" aria-label="Calculadora de gorjeta">
+
+    <div class="stamp" id="stamp">boa<br>gorjeta</div>
+
+    <div class="masthead">
+      <div class="store">Calculadora de Gorjeta</div>
+      <div class="sub" id="datetime">— — / — — / — — — —</div>
+    </div>
+
+    <div class="barcode" id="barcode" aria-hidden="true"></div>
+
+    <div class="field-bill">
+      <span class="prefix">R$</span>
+      <input type="text" inputmode="decimal" id="bill" value="100,00" aria-label="Valor da conta">
+    </div>
+
+    <span class="tip-row-label">Gorjeta</span>
+    <div class="tip-presets" role="group" aria-label="Porcentagem de gorjeta">
+      <button data-tip="10">10%</button>
+      <button data-tip="15" class="active">15%</button>
+      <button data-tip="20">20%</button>
+    </div>
+    <div class="custom-tip">
+      <input type="range" id="tipRange" min="0" max="35" value="15" aria-label="Gorjeta personalizada">
+      <span class="tip-value" id="tipValue">15%</span>
+    </div>
+
+    <div class="people-row">
+      <span class="tip-row-label" style="margin-bottom:0;">Dividir entre</span>
+      <div class="stepper">
+        <button id="minus" aria-label="Diminuir numero de pessoas">–</button>
+        <span class="count" id="peopleCount">1</span>
+        <button id="plus" aria-label="Aumentar numero de pessoas">+</button>
+      </div>
+    </div>
+
+    <hr class="dashed">
+
+    <div class="totals">
+      <div class="line-item">
+        <label>Subtotal</label>
+        <span class="amount" id="subtotal">R$ 100,00</span>
+      </div>
+      <div class="line-item">
+        <label>Gorjeta</label>
+        <span class="amount" id="tipAmount">R$ 15,00</span>
+      </div>
+      <div class="line-item grand">
+        <label>Total</label>
+        <span class="amount" id="total">R$ 115,00</span>
+      </div>
+    </div>
+
+    <hr class="dashed">
+
+    <div class="per-person">
+      <div class="tag">Por pessoa</div>
+      <div class="amount" id="perPerson">R$ 115,00</div>
+    </div>
+
+    <div class="footer-note">Obrigada pela visita — Volte sempre!</div>
+    <div class="footer-note">Desenvolvido por Camila Fernandes — 2026</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
