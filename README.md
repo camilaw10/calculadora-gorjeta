@@ -8,7 +8,7 @@ Status: Concluído | Tecnologias: HTML5, CSS3, JavaScript
 
 Demonstração:
 
-Acesse o projeto online aqui:
+Acesse o projeto online aqui: https://camilaw10.github.io/calculadora-gorjeta/
 
 Funcionalidades:
 
